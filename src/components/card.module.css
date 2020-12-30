@@ -1,0 +1,37 @@
+.card {
+    width: 400px;
+    border: 1px solid grey;
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.picSmall {
+    width: 400px;
+    height: 300px;
+    margin: 10px 0;
+}
+.info {
+    width: calc(100% - 20px);
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.date {
+    display: flex;
+    align-items: center;
+    height: 25px;
+
+}
+.likes {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    height: 25px;
+    background: url('/src/icons/like.svg') left center no-repeat;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
