@@ -10,6 +10,7 @@
 }
 .userUrl {
     color: black;
+    text-decoration: none;
 }
 .picSmall {
     width: 400px;

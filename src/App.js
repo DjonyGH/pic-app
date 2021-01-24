@@ -32,11 +32,13 @@ function App() {
         {photos.map(photo => (
           <Card
             key={photo.id}
+            id={photo.id}
             userName={photo.user.name}
             userUrl={photo.user.links.html}
             urlImg={photo.urls.small}
             dateImg={photo.created_at.split('T')[0]}
             countLikes={photo.likes}
+            isLiked={photo.liked_by_user}
           />
         ))}
       </div>

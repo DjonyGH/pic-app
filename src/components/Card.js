@@ -1,7 +1,20 @@
 import styles from './card.module.css';
 
 function Card(props) {
-    const {userName, userUrl, urlImg, dateImg, countLikes} = props;
+    const {id, userName, userUrl, isLiked, urlImg, dateImg, countLikes} = props;
+
+    const liking = async () => {
+        if (!isLiked) {
+            const res = await fetch(`https://api.unsplash.com/photos/:${id}/like?code=B12PstzUWrwhlWL7XUlHpblLuXqHbtBPBJBkaV5Kh_Q`, {
+                method: 'POST'
+            });
+            const data = await res.json();
+            console.log(data);
+        } else {
+
+        }
+    }
+
     return (
         <div className={styles.card}>
             <div className={styles.userName}>
@@ -12,7 +25,10 @@ function Card(props) {
                 <div className={styles.date}>
                     {dateImg}
                 </div>
-                <button className={styles.likes}>
+                <button 
+                    className={styles.likes}
+                    onClick={liking}
+                >
                     {countLikes}
                 </button>
             </div>
